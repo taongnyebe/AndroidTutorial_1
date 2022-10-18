@@ -1,0 +1,5 @@
+- modify show function in player class, so that it also prints the details for the weapon that the players have
+(Players name, lives, level and score with weapon and damage)
+
+- louise gets the sword from tim and replace it with spears
+
