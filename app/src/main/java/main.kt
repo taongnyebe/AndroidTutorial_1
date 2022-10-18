@@ -1,33 +1,43 @@
-fun main(args: Array<String>) {
+fun main() {
   println("Testing the address")
 
-  var integer : Int
-  var sting : String
-  var float : Float
-  var double : Double
+  var double = 123.456
   var boolean : Boolean
   var char : Char
 
-  integer = 123
-  sting = "Hello"
-  float = 123.45f
+  val integer : Int = 123
+  val sting : String = "Hello"
+  val float : Float = 123.45f
   double = 123.45
-  println("added inside: $integer $sting \nadded outside: " + double)
+  println("added inside: $integer $sting $float \nadded outside: $double")
 
 
-  val player_tim = player_data("Tim")
+
+  val playerTim = PlayerData("Tim")
   println("-- Player --\n" +
-      "Address Data: $player_tim \n" +
-      "Name: " + player_tim.name + "\n" +
-      "Lives: " + player_tim.lives + "\n" +
-      "Level: " + player_tim.level + "\n" +
-      "Score: " + player_tim.score + "\n"
+      "Address Data: $playerTim \n" +
+      "Name: " + playerTim.name + "\n" +
+      "Lives: " + playerTim.lives + "\n" +
+      "Level: " + playerTim.level + "\n" +
+      "Score: " + playerTim.score + "\n"
   )
 
   print("\n\n")
 
-  val minion = monster_data("Minion", 1, 10, 5)
+  val minion = MonsterData("Minion", 1, 10, 5)
+  val stone_axe = WeaponData("Stone Axe", "Axe", 5, 100)
+  val metal_axe = WeaponData("Metal Axe", "Axe", 10, 100)
+
+  stone_axe.status()
+  metal_axe.status()
   minion.status()
+  minion.setDamage(stone_axe.getDamage())
+
+
+
+
+
+
 
 
 
