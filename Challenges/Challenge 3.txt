@@ -1,0 +1,1 @@
+- for loop prints out all the number from 0 - 100 that are divisible by both 3 and 5

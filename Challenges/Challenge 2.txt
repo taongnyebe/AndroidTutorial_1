@@ -1,0 +1,6 @@
+1.
+- override toString of Loot to return all properties of Loot
+- Details of potion instead of Loot@ Hash code
+
+2.
+- override toString of weapon to return all weapon properties

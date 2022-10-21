@@ -1,5 +1,5 @@
 fun main() {
-  /*
+  /* Lesson 1
   println("Testing the address")
 
   var double = 123.456
@@ -35,7 +35,7 @@ fun main() {
   minion.setDamage(stone_axe.getDamage())
   */
 
-  // Challenge 1
+  /* Challenge 1
   val tim = Player("Tim")
 
   val louise = Player("Louise", 5)
@@ -51,8 +51,9 @@ fun main() {
   tim.weapon = temp
   println(tim.show())
   println(louise.show())
+  */
 
-  // OOP Coding
+  /* OOP Coding
   val stone_axe = WeaponData("Stone Axe", "Axe", 5, 100)
 
   val jack = PlayerData("Player","Jack", 1, 100, 100)
@@ -61,6 +62,9 @@ fun main() {
   val minion = MonsterData("Monster", "Humanoid", "Pawn", "Minion", 1, 10, 5,
     weapon = WeaponData("Claw", "None", 2, 100))
   minion.status()
+  val thick_minion = MonsterData("Monster", "Humanoid", "Rook", "Thick Minion", 3, 15, 5,
+    weapon = WeaponData("Fist", "None", 5, 100))
+  thick_minion.status()
 
   println("----- Playing -----")
   minion.setDamage(jack.attack(minion.getDefence()))
@@ -70,6 +74,76 @@ fun main() {
   jack.setDamage(minion.attack(jack.getDefence()))
   jack.checkWeapon()
   minion.setDamage(jack.attack(minion.getDefence()))
+  jack.checkWeapon()
+  println("Jack continues to walk")
+  println("Jack Meets Thick Minion")
+  thick_minion.setDamage(jack.attack(thick_minion.getDefence()))
+  jack.setDamage(thick_minion.attack(jack.getDefence()))
+  thick_minion.setDamage(jack.attack(thick_minion.getDefence()))
+  jack.setDamage(thick_minion.attack(jack.getDefence()))
+  thick_minion.setDamage(jack.attack(thick_minion.getDefence()))
+  jack.setDamage(thick_minion.attack(jack.getDefence()))
+  thick_minion.setDamage(jack.attack(thick_minion.getDefence()))
+  jack.setDamage(thick_minion.attack(jack.getDefence()))
+  thick_minion.setDamage(jack.attack(thick_minion.getDefence()))
+  jack.checkWeapon()
+  println("--- Game Over ---")
+  */
+
+  /* Lesson 2
+  val redPotion = Loot("Red Potion", LootType.POTION, 7.50)
+  tim.inventory.add(redPotion)
+  tim.showInvetory()
+  println(tim)
+   */
+
+  /* Challenge 2
+  println("\n\n")
+  println("----- Challenge 2 -----")
+  println("1.\n")
+  tim.showInvetory()
+  println("2.\n")
+  tim.showWeapon()
+   */
+
+  /* Lesson 3
+  println("\n\n")
+  println("----- Lesson 3 -----")
+  val chest_armor = Loot("Chest Armor", LootType.ARMOR, 80.0)
+  val ring_charm = Loot("Ring Charm", LootType.RING, 40.0)
+  tim.inventory.add(chest_armor)
+  tim.inventory.add(ring_charm)
+  tim.showInvetory()
+   */
+
+  /* Challenge 3
+  for (i in 0..100) {
+    if (i % 3 == 0 && i % 5 == 0) {
+        println(i)
+    }
+  }
+  */
+
+  // Lesson 4
+  val tim = Player("Tim")
+  val redPotion = Loot("Red Potion", LootType.POTION, 7.50)
+  val chest_armor = Loot("Chest Armor", LootType.ARMOR, 80.0)
+  val ring_charm = Loot("Ring Charm", LootType.RING, 40.0)
+  val stone_axe = Weapon("Stone Axe", 5)
+
+  tim.addInventory(redPotion)
+  tim.addWeapon(stone_axe)
+  tim.showInvetory()
+  tim.showWeapon()
+  tim.addInventory(ArrayList(listOf(chest_armor, ring_charm)))
+  tim.showInvetory()
+  tim.show()
+  if (tim.removeInventory(redPotion)) {
+    println("Red Potion removed")
+  } else {
+    println("Can't remove Red Potion")
+  }
+  tim.showInvetory()
 
 
 
