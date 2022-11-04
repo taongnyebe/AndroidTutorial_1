@@ -20,4 +20,8 @@ class Loot(name: String, type: LootType, value: Double) {
             -----------------
         """.trimIndent()
     }
+
+    fun getName(): String {
+        return this.name
+    }
 }

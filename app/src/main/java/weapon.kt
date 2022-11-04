@@ -1,4 +1,5 @@
-class Weapon (val name: String, var damage: Int) {
+class Weapon (private val name: String,private var damage: Int) {
+
     override fun toString(): String {
         return """
             name: $name
@@ -6,5 +7,9 @@ class Weapon (val name: String, var damage: Int) {
             -----------------
 
         """.trimIndent()
+    }
+
+    fun getName(): String {
+        return this.name
     }
 }

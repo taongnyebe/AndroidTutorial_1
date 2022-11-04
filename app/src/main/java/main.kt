@@ -124,7 +124,7 @@ fun main() {
   }
   */
 
-  // Lesson 4
+  /* Lesson 4
   val tim = Player("Tim")
   val redPotion = Loot("Red Potion", LootType.POTION, 7.50)
   val chest_armor = Loot("Chest Armor", LootType.ARMOR, 80.0)
@@ -133,18 +133,23 @@ fun main() {
 
   tim.addInventory(redPotion)
   tim.addWeapon(stone_axe)
-  tim.showInvetory()
-  tim.showWeapon()
   tim.addInventory(ArrayList(listOf(chest_armor, ring_charm)))
-  tim.showInvetory()
   tim.show()
-  if (tim.removeInventory(redPotion)) {
-    println("Red Potion removed")
-  } else {
-    println("Can't remove Red Potion")
-  }
-  tim.showInvetory()
+  tim.showInventory()
+  tim.showWeapon()
+  tim.removeInventory(redPotion)
+  tim.showInventory()
 
+  */
+
+  // Lesson 5
+
+  val dracula = VampyreKing("Dracula")
+  println(dracula)
+  while (dracula.lives > 0)
+  {
+    dracula.takeDamage(12)
+  }
 
 
 }
